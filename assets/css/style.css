@@ -1,7 +1,12 @@
 /* Global Classes */
 
-body {
-    background-image: url("../images/halloween.png");
+.body-bg-halloween {
+    background: lightcoral;
+    margin-bottom: 80px;
+}
+
+.body-bg-castle {
+    background-image: url("../images/castle.png");
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 40px;
@@ -15,6 +20,10 @@ h1 {
     font-size: 3em;
 }
 
+.invisible {
+    color: transparent;
+}
+
 h3 {
     font-family: 'Chelsea Market', cursive;
 }
@@ -24,6 +33,13 @@ h3 {
     display: flex;
     max-width: 85%;
     margin: auto;
+}
+
+.wrapper-slideout {
+    animation-name: slideout;
+    margin-left: -3000px;
+    animation-duration: 2s;
+    animation-timing-function: linear;
 }
 
 .stats {
@@ -44,10 +60,29 @@ h3 {
     50% { opacity: 0; }
 }
 
+@keyframes slideout {  
+    from { margin-left: 0; }
+    to { margin-left: -3000px; }
+}
+
+@keyframes fadein {  
+    from { background-color: darkslategray; }
+    to { background-color: transparent; }
+}
+
+
+.hidden {
+    display: none !important;
+}
+
 /* Bootstrap Overrides */
 .card-body {
     background-color: white;
 }
+
+/* .navbar {
+    background-color: rgba(47,79,79,0.1)
+} */
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -60,10 +95,16 @@ html {
     text-align: center;
     bottom: 0;
     width: 100%;
-    height: 40px; /* Set the fixed height of the footer here */
-    line-height: 40px; /* Vertically center the text there */
-    color: #444;
+    height: 80px; /* Set the fixed height of the footer here */
+    line-height: 80px; /* Vertically center the text there */
+    color: #fff;
     font-size: 0.5em;
+  }
+  .footer-table {
+    background-image: url("../images/table.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: transparent;
   }
 
 /* font-family: 'Titan One', cursive;
