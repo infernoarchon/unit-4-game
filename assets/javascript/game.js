@@ -25,7 +25,6 @@ window.onload = function() {
     $(document.body).on("click", "#frankenberrybtn", function() {
         activeEnemy = "Franken Berry"
         currentEnemyHealth = allenemies[activeEnemy].healthpoints
-        console.log("check reset of " + currentEnemyHealth)
         rpg.hideEnemyMenu()
         rpg.displayEnemy()
     });
@@ -85,20 +84,20 @@ window.onload = function() {
         "Count Chocula" : {
             "attackpower" : 5,
             "healthpoints" : 90,
-            "counterpower" : 8, 
+            "counterpower" : 9, 
             "pic" : "<img src='./assets/images/countchocula.png'>",
             "atkpic" : "<img src='./assets/images/countchoculaatk.png'>"
         },
         "Franken Berry" : {
             "attackpower" : 3,
-            "healthpoints" : 120,
+            "healthpoints" : 180,
             "counterpower" : 4,
             "pic" : "<img src='./assets/images/frankenberry.png'>",
             "atkpic" : "<img src='./assets/images/frankenberryatk.png'>"
         },
         "Frute Brute" : {
             "attackpower" : 4,
-            "healthpoints" : 100,
+            "healthpoints" : 110,
             "counterpower" : 7,
             "pic" : "<img src='./assets/images/frutebrute.png'>", 
             "atkpic" : "<img src='./assets/images/frutebruteatk.png'>"
@@ -106,7 +105,7 @@ window.onload = function() {
         "Boo Berry" : {
             "attackpower" : 6,
             "healthpoints" : 66,
-            "counterpower" : 10, 
+            "counterpower" : 15, 
             "pic" : "<img src='./assets/images/booberry.png'>",
             "atkpic" : "<img src='./assets/images/booberryatk.png'>"
         }
@@ -117,7 +116,7 @@ window.onload = function() {
             if (x === "Count Chocula") {
                 playerCharName = "Count Chocula"
                 rpg.getEnemies(playerCharName)
-                $("#enemy-area").html("<ul id='enemyMenu' class='choose-enemy col-3 list-group'><div class='choosetext'><h3 class='text-light blink_me'>CHOOSE AN OPPONENT</h3></div></ul>")
+                $("#enemy-area").html("<ul id='enemyMenu' class='choose-enemy col-3 list-group'><div class='choosetext'><h4 class='text-light blink_me'>CHOOSE AN OPPONENT</h4></div></ul>")
                 for (var i = 0; i < Object.keys(enemies).length; i++) {
                     var currentEnemy = Object.keys(enemies)[i]
                     var counterattackstat = enemies[currentEnemy].counterpower
@@ -130,7 +129,7 @@ window.onload = function() {
             if (x === "Franken Berry") {
                 playerCharName = "Franken Berry"
                 rpg.getEnemies(playerCharName)
-                $("#enemy-area").html("<ul id='enemyMenu' class='choose-enemy col-3 list-group'><div class='choosetext'><h3 class='text-light blink_me'>CHOOSE AN OPPONENT</h3></div></ul>")
+                $("#enemy-area").html("<ul id='enemyMenu' class='choose-enemy col-3 list-group'><div class='choosetext'><h4 class='text-light blink_me'>CHOOSE AN OPPONENT</h4></div></ul>")
                 for (var i = 0; i < Object.keys(enemies).length; i++) {
                     var currentEnemy = Object.keys(enemies)[i]
                     var counterattackstat = enemies[currentEnemy].counterpower
@@ -143,7 +142,7 @@ window.onload = function() {
             if (x === "Frute Brute") {
                 playerCharName = "Frute Brute"
                 rpg.getEnemies(playerCharName)
-                $("#enemy-area").html("<ul id='enemyMenu' class='choose-enemy col-3 list-group'><div class='choosetext'><h3 class='text-light blink_me'>CHOOSE AN OPPONENT</h3></div></ul>")
+                $("#enemy-area").html("<ul id='enemyMenu' class='choose-enemy col-3 list-group'><div class='choosetext'><h4 class='text-light blink_me'>CHOOSE AN OPPONENT</h4></div></ul>")
                 for (var i = 0; i < Object.keys(enemies).length; i++) {
                     var currentEnemy = Object.keys(enemies)[i]
                     var counterattackstat = enemies[currentEnemy].counterpower
@@ -156,7 +155,7 @@ window.onload = function() {
             if (x === "Boo Berry") {
                 playerCharName = "Boo Berry"
                 rpg.getEnemies(playerCharName)
-                $("#enemy-area").html("<ul id='enemyMenu' class='choose-enemy col-3 list-group'><div class='choosetext'><h3 class='text-light blink_me'>CHOOSE AN OPPONENT</h3></div></ul>")
+                $("#enemy-area").html("<ul id='enemyMenu' class='choose-enemy col-3 list-group'><div class='choosetext'><h4 class='text-light blink_me'>CHOOSE AN OPPONENT</h4></div></ul>")
                 for (var i = 0; i < Object.keys(enemies).length; i++) {
                     var currentEnemy = Object.keys(enemies)[i]
                     var counterattackstat = enemies[currentEnemy].counterpower
@@ -244,10 +243,10 @@ window.onload = function() {
             battle = false;
             console.log(allenemies)
             if (Object.keys(allenemies).length == 1) {
-                $("#fight-summary").html("Congratulations! You Beat Everyone!<br><a href='#' id='play-again'><i class='fas fa-arrow-left'></i> Return to Character Select</a>")
+                $("#fight-summary").html("Congratulations! You beat everyone!<br><a href='#' id='play-again'><i class='fas fa-arrow-left'></i> Return to Character Select</a>")
                 return
             }
-            $("#fight-summary").html("You win!!<br><a href='#' id='play-on'>Select a New Opponent <i class='fas fa-arrow-right'></i></a>")
+            $("#fight-summary").html("You beat " + activeEnemy +"!<br><a href='#' id='play-on'>Select a New Opponent <i class='fas fa-arrow-right'></i></a>")
         },
         calculateDamage : function() {
             if (currentPlayerHealth <= enemies[activeEnemy].counterpower) {

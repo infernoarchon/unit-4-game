@@ -4,17 +4,21 @@ h1 {
     color: white;
     text-transform: uppercase;
     text-shadow: 5px 5px black;
-    font-size: 3em;
+    font-size: 2em;
 }
 
-h3 {
+h4 {
     font-family: 'Chelsea Market', cursive;
+    font-size: 1em;
+}
+
+body {
+    margin-bottom: 80px;
 }
 
 /* Custom Classes */
 
 .body-bg-halloween {
-    margin-bottom: 80px;
     background-image: url("../images/castle.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,14 +45,14 @@ h3 {
 #player-stats {
     position: fixed;
     left: 4%;
-    bottom: 60%;
+    top: 20%;
     text-align: left;
 }
 
 #enemy-stats {
     position: fixed;
     right: 4%;
-    bottom: 60%;
+    top: 20%;
     text-align: left;
 }
 
@@ -66,6 +70,10 @@ h3 {
     text-align: right;
 }
 
+#fight-summary {
+    font-size: 0.8em;
+}
+
 .choose-enemy {
     position: fixed;
     right: 4%;
@@ -74,10 +82,9 @@ h3 {
 }
 
 .big-wrapper {
-    height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.7);
-    position: absolute;
+    margin-top: -25px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0));
 }
 
 .game-asset {
@@ -88,7 +95,7 @@ h3 {
 
 .wrapper {
     display: flex;
-    max-width: 85%;
+    max-width: 95%;
     margin: auto;
 }
 
@@ -104,7 +111,7 @@ h3 {
     float: right;
     display: flex;
     line-height: 1em;
-    font-size: 1.25em;
+    font-size: 1em;
     color: #ccc;
     font-weight: 600;
 }
@@ -142,10 +149,19 @@ h3 {
     display: none !important;
 }
 
+#countcard, #frankcard, #brutecard, #boocard {
+    max-width: 20rem;
+    margin: 0 1% 0 1%;
+}
+
 /* Bootstrap Overrides */
 
 .col-12, .col-5 {
     padding: 0;
+}
+
+.card-body {
+    font-size: 0.75em;
 }
 
 /* .navbar {
@@ -158,17 +174,7 @@ html {
     position: relative;
     min-height: 100%;
   }
-  .footer {
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    width: 100%;
-    height: 80px; /* Set the fixed height of the footer here */
-    line-height: 80px; /* Vertically center the text there */
-    color: #fff;
-    font-size: 0.5em;
-  }
-  .footer-table {
+.footer-table {
     background-image: url("../images/table.png");
     background-repeat: no-repeat;
     background-size: cover;
