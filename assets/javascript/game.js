@@ -89,7 +89,7 @@ window.onload = function() {
             "atkpic" : "<img src='./assets/images/countchoculaatk.png'>"
         },
         "Franken Berry" : {
-            "attackpower" : 3,
+            "attackpower" : 2,
             "healthpoints" : 180,
             "counterpower" : 4,
             "pic" : "<img src='./assets/images/frankenberry.png'>",
