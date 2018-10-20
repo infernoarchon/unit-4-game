@@ -38,11 +38,25 @@ h3 {
     bottom: 80px;
 }
 
+#player-stats {
+    position: fixed;
+    left: 4%;
+    bottom: 60%;
+    text-align: left;
+}
+
+#enemy-stats {
+    position: fixed;
+    right: 4%;
+    bottom: 60%;
+    text-align: left;
+}
+
 #action-area {
     margin-top: 30%;
     width: 20%;
     height: 150px;
-    background: white;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 #enemy-area {
@@ -50,6 +64,13 @@ h3 {
     bottom: 80px;
     right: 0%;
     text-align: right;
+}
+
+.choose-enemy {
+    position: fixed;
+    right: 4%;
+    bottom: 40%;
+    text-align: left;
 }
 
 .big-wrapper {
@@ -88,6 +109,16 @@ h3 {
     font-weight: 600;
 }
 
+.stats-dark {
+    width: 8em;
+    float: right;
+    display: flex;
+    line-height: 1em;
+    font-size: 1.25em;
+    color: #212529;
+    font-weight: 600;
+}
+
 .blink_me {
     animation: blinker 2.5s linear infinite;
 }
@@ -112,9 +143,6 @@ h3 {
 }
 
 /* Bootstrap Overrides */
-.card-body {
-    background-color: white;
-}
 
 .col-12, .col-5 {
     padding: 0;
