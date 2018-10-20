@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body class="body-bg-halloween">
+    <div class="big-wrapper">   
         <nav class="navbar justify-content-center mt-4"><h1 class="text-light">Spooky Breakfast Battle</h1></nav>
             <div class="wrapper row justify-content-center">
                     <div class="choosetext">
@@ -36,7 +37,7 @@
                             <img class="card-img-top bg-info" src="assets/images/frutebrute.png" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">Frute Brute</h5>
-                                <p class="card-text">Frute Brute's cereal is just as colorful as his signature overalls: fruit flavored and filled with lime-flavored marshmallows. It's so dangerously delicious that it's been spotted in two of Quentin Tarantino’s movies — Pulp Fiction and Reservoir Dogs!</p>
+                                <p class="card-text">Frute Brute's cereal is just as colorful as his signature overalls: fruit flavored and filled with lime-flavored marshmallows. It's so dangerously delicious that it's appeared in two of Quentin Tarantino’s movies — Pulp Fiction and Reservoir Dogs!</p>
                                 <a href="#" class="btn btn-danger" id="brute-btn">Choose</a><div class="stats mt-2 justify-content-around"><i class="fas fa-sm fa-utensil-spoon ml-3"></i>7<i class="fas fa-sm fa-lemon ml-3"></i>130</div>
                             </div>
                         </div>
@@ -50,8 +51,22 @@
                         </div>
                 </div>
             </div>
-                
-        <footer class="footer">Count Chocula, Franken Berry, Frute Brute, and Boo Berry are owned by General Mills</footer>
+        </div>
+        <div class="game-area row hidden">
+            <div class="col-12">
+                <div class="row justify-content-between">
+                    <section id="player-health" class="col-4 game-asset">player health</section>
+                    <section id="fight-sign" class="col-2 game-asset">FIGHT!</section>
+                    <section id="enemy-health" class="col-4 game-asset">enemy health</section>
+                </div>
+                <div class="row justify-content-center align-bottom">
+                    <section id="player-area" class="col-5"></section>
+                    <section id="action-area" class="col-2">Action!</section>
+                    <section id="enemy-area" class="col-5"></section>
+                </div>
+            </div>
+        </div>
+        <footer class="footer-table">Count Chocula, Franken Berry, Frute Brute, and Boo Berry are owned by General Mills</footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script types="text/javascript" src="assets/javascript/game.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
