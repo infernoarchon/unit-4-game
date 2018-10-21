@@ -1,5 +1,4 @@
 window.onload = function() {
-
     // Character Click Events
     $("#count-btn").on("click", function() {
         rpg.start("Count Chocula")
@@ -86,28 +85,32 @@ window.onload = function() {
             "healthpoints" : 90,
             "counterpower" : 9, 
             "pic" : "<img src='./assets/images/countchocula.png'>",
-            "atkpic" : "<img src='./assets/images/countchoculaatk.png'>"
+            "atkpic" : "<img src='./assets/images/countchoculaatk.png'>",
+            "music" : "./assets/sounds/monstermashy.mp3"
         },
         "Franken Berry" : {
             "attackpower" : 2,
             "healthpoints" : 180,
             "counterpower" : 4,
             "pic" : "<img src='./assets/images/frankenberry.png'>",
-            "atkpic" : "<img src='./assets/images/frankenberryatk.png'>"
+            "atkpic" : "<img src='./assets/images/frankenberryatk.png'>",
+            "music" : "./assets/sounds/monstermashy.mp3"
         },
         "Frute Brute" : {
             "attackpower" : 4,
             "healthpoints" : 110,
             "counterpower" : 7,
             "pic" : "<img src='./assets/images/frutebrute.png'>", 
-            "atkpic" : "<img src='./assets/images/frutebruteatk.png'>"
+            "atkpic" : "<img src='./assets/images/frutebruteatk.png'>",
+            "music" : "./assets/sounds/monstermashy.mp3"
         },
         "Boo Berry" : {
             "attackpower" : 6,
             "healthpoints" : 66,
             "counterpower" : 15, 
             "pic" : "<img src='./assets/images/booberry.png'>",
-            "atkpic" : "<img src='./assets/images/booberryatk.png'>"
+            "atkpic" : "<img src='./assets/images/booberryatk.png'>",
+            "music" : "./assets/sounds/monstermashy.mp3"
         }
     }
 
@@ -171,6 +174,16 @@ window.onload = function() {
             }
             rpg.setGamestart()
         },
+        playCharMusic : function (x) {
+            console.log("playing sound")
+            var trackurl = playerChar[playerCharName].music
+            console.log(trackurl)
+            var sound = new Audio(trackurl)
+            sound.volume = 0.3;
+            sound.currentTime = 10;
+            sound.play();
+            sound.loop=true;
+        },
         setGamestart : function () {
             gamestarted = true;
         },
@@ -189,8 +202,10 @@ window.onload = function() {
                     "attackpower" : enemies[playerCharName].attackpower,
                     "healthpoints" : enemies[playerCharName].healthpoints,
                     "counterpower" : enemies[playerCharName].counterpower,
+                    "music" : enemies[playerCharName].music
                 }
             }
+            console.log(playerChar)
             $("#char-name").html(Object.keys(playerChar))
             $("#char-atk").html(playerChar[playerCharName].attackpower)
             $("#char-health").html(playerChar[playerCharName].healthpoints)
@@ -297,6 +312,7 @@ window.onload = function() {
             enemies = allenemies
             if(attacks === 0) {
             rpg.initPlayer()
+            rpg.playCharMusic()
             $("#player-area").html(enemies[playerCharName].atkpic)
             delete enemies[x];
             }
