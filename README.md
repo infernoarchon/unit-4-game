@@ -7,8 +7,8 @@ The objectives of this halloween-themed game is to beat all of the other cereal 
 ## Backlog
 
 - Add character attack abilities:
-  - Count Chocula: After defeating an opponent, gain half your current life total
-  - Franken Berry: Has a 30% chance to take 1/2 damage 
+  - Count Chocula: After defeating an opponent, gain 50% of your current life total
+  - Franken Berry: Has a 30% chance to take 50% less damage 
   - Frute Brute: When your health is below 50, take 50% less damage and deal 50% more damage
   - Boo Berry: Has a 66% chance to deal an extra 6 damage  
 
