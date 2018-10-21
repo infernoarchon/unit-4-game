@@ -1,6 +1,6 @@
 # RPG Game
 
-The objectives of this halloween-themed game is to beat all of the other cereal mascots. You can play as either Count Chocula, Franken Berry, Frute Brute, or Boo Berry. Each character has its own strengths and weaknesses. 
+The objective of this halloween-themed game is to beat all of the other cereal mascots. You can play as either Count Chocula, Franken Berry, Frute Brute, or Boo Berry. Each character has its own strengths and weaknesses. 
 
 ## Backlog
 
