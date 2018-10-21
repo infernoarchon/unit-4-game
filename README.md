@@ -7,7 +7,7 @@ The objectives of this halloween-themed game is to beat all of the other cereal 
 ## Backlog
 
 - Add character abilities:
-  - Count Chocula: After a monster is defeated, gains both their attack power and counter attack power
+  - Count Chocula: After a monster is defeated, gains both their attack and counter attack power
   - Franken Berry: Has a 20% chance to take 50% less damage 
   - Frute Brute: When your health is below 50, take 50% less damage and deal 50% more damage
   - Boo Berry: Has a 66% chance to deal an extra 6 damage  
